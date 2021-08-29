@@ -1,0 +1,12 @@
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  
+  &--semi-bold {
+    font-weight: 600;
+  }
+
+  &--cursive {
+    font-style: italic;
+  }
+}
