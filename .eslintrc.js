@@ -19,6 +19,8 @@ module.exports = {
     "import/extensions": ["warn", "never"],
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "@typescript-eslint/no-var-requires": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
   },
   plugins: ["jest-dom", "@typescript-eslint"],
 };
