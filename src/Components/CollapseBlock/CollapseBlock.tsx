@@ -6,7 +6,7 @@ interface ICollapseBlockProps {
   title: string;
   collapse?: boolean;
 }
-const CollapseBlock = (props: ICollapseBlockProps) => {
+const CollapseBlock = (props: ICollapseBlockProps): JSX.Element => {
   let classNames = "collapse-block__body";
   classNames += props.collapse ? " collapse-block__body--collapse" : "";
   return (

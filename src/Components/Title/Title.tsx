@@ -5,8 +5,8 @@ interface ITitleProps {
   children: JSX.Element | string;
 }
 
-const Title = (props: ITitleProps) => {
-  let { level, children } = props;
+const Title = (props: ITitleProps): JSX.Element => {
+  let { level } = props;
   if (level > 6) {
     level = 6;
   } else if (level < 1) {
@@ -14,7 +14,7 @@ const Title = (props: ITitleProps) => {
   }
   const TitleElement = `h${level}` as keyof JSX.IntrinsicElements;
 
-  return <TitleElement>{children}</TitleElement>;
+  return <TitleElement>{props.children}</TitleElement>;
 };
 
 export default Title;

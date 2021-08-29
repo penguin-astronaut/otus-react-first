@@ -7,7 +7,7 @@ interface ITextProps {
   children: JSX.Element | string;
 }
 
-const Text = (props: ITextProps) => {
+const Text = (props: ITextProps): JSX.Element => {
   const { semiBold, cursive, children } = props;
   let classes = "text";
   classes += semiBold ? " text--semi-bold" : "";
