@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 
-interface ICollapseBlockProps {
+export interface ICollapseBlockProps {
   children: JSX.Element | string;
   title: string;
   collapse?: boolean;
