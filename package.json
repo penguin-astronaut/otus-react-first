@@ -14,7 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "loki": "loki",
+    "loki:ci": "build-storybook && loki --requireReference --reactUri file:./storybook-static",
     "loki:test": "loki test"
   },
   "repository": {
