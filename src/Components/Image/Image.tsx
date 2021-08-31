@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IImageProps {
+export interface IImageProps {
   src: string;
   alt: string;
 }
