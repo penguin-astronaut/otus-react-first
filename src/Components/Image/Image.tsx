@@ -1,7 +1,12 @@
 import React from "react";
 
-const Image = (props: { src: string; alt: string }): JSX.Element => (
-  <img src={props.src} alt={props.alt} />
+interface IImageProps {
+  src: string;
+  alt: string;
+}
+
+const Image: React.FC<IImageProps> = ({ src, alt }): JSX.Element => (
+  <img src={src} alt={alt} />
 );
 
 export default Image;

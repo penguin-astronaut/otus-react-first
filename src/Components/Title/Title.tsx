@@ -5,16 +5,16 @@ interface ITitleProps {
   children: JSX.Element | string;
 }
 
-const Title = (props: ITitleProps): JSX.Element => {
-  let { level } = props;
+const Title: React.FC<ITitleProps> = ({ level, children }) => {
+  let titleLevel = level;
   if (level > 6) {
-    level = 6;
+    titleLevel = 6;
   } else if (level < 1) {
-    level = 1;
+    titleLevel = 1;
   }
-  const TitleElement = `h${level}` as keyof JSX.IntrinsicElements;
+  const TitleElement = `h${titleLevel}` as keyof JSX.IntrinsicElements;
 
-  return <TitleElement>{props.children}</TitleElement>;
+  return <TitleElement>{children}</TitleElement>;
 };
 
 export default Title;
