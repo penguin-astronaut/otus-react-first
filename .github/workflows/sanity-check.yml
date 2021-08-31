@@ -22,5 +22,4 @@ jobs:
           npm run test
       - name: Loki check
         run: |
-          npm run storybook --ci
-          npm run loki
+          build-storybook && loki --requireReference --reactUri file:./storybook-static
