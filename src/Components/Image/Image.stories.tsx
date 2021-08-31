@@ -11,13 +11,8 @@ export default {
 const Template: Story<IImageProps> = (args) => <Image {...args} />;
 
 export const Picture = Template.bind({});
-export const NotFound = Template.bind({});
 
 Picture.args = {
   src: "https://via.placeholder.com/150",
   alt: "alt text",
-};
-NotFound.args = {
-  src: "/notfound.png",
-  alt: "alt text using",
 };

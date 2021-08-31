@@ -12,7 +12,8 @@
     "build": "webpack --mode=production --target=es5",
     "serve": "webpack serve --mode=development",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "loki": "loki test"
   },
   "repository": {
     "type": "git",
@@ -59,6 +60,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.1.0",
     "lint-staged": "^11.1.2",
+    "loki": "^0.28.1",
     "prettier": "^2.3.2",
     "sass": "^1.38.2",
     "sass-loader": "^12.1.0",
@@ -71,5 +73,20 @@
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix --ext .ts,.js",
     "*.{js,ts,tsx,css,md,yml,html,json}": "prettier --write"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
