@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
 
-interface ITextProps {
+export interface ITextProps {
   semiBold?: boolean;
   cursive?: boolean;
   children: JSX.Element | string;
