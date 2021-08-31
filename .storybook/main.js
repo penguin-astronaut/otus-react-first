@@ -4,4 +4,12 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+    });
+
+    return config;
+  },
 };
