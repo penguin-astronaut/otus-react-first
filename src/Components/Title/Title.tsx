@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ITitleProps {
+export interface ITitleProps {
   level: number;
   children: JSX.Element | string;
 }
