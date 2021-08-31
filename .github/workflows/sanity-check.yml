@@ -22,5 +22,5 @@ jobs:
           npm run test
       - name: Loki check
         run: |
-          npm run storybook
+          npm run storybook --ci
           npm run loki
