@@ -1,18 +1,12 @@
 import React from "react";
 
 export interface ITitleProps {
-  level: number;
+  level: 1 | 2 | 3 | 4 | 5 | 6;
   children: JSX.Element | string;
 }
 
 const Title: React.FC<ITitleProps> = ({ level, children }) => {
-  let titleLevel = level;
-  if (level > 6) {
-    titleLevel = 6;
-  } else if (level < 1) {
-    titleLevel = 1;
-  }
-  const TitleElement = `h${titleLevel}` as keyof JSX.IntrinsicElements;
+  const TitleElement = `h${level}` as keyof JSX.IntrinsicElements;
 
   return <TitleElement>{children}</TitleElement>;
 };
