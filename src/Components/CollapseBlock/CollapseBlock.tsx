@@ -6,21 +6,51 @@ export interface ICollapseBlockProps {
   title: string;
   collapse?: boolean;
 }
-const CollapseBlock: React.FC<ICollapseBlockProps> = ({
-  children,
-  title,
-  collapse,
-}): JSX.Element => {
-  let classNames = "collapse-block__body";
-  classNames += collapse ? " collapse-block__body--collapse" : "";
-  return (
-    <div className="collapse-block">
-      <div className="collapse-block__header">
-        <div className="collapse-block__title">{title}</div>
+export interface ICollapseBlockState {
+  collapse: boolean;
+}
+// const CollapseBlock: React.FC<ICollapseBlockProps> = ({
+//   children,
+//   title,
+//   collapse,
+// }): JSX.Element => {
+//   let classNames = "collapse-block__body";
+//   classNames += collapse ? " collapse-block__body--collapse" : "";
+//   return (
+//     <div className="collapse-block">
+//       <div className="collapse-block__header">
+//         <div className="collapse-block__title">{title}</div>
+//       </div>
+//       <div className={classNames}>{children}</div>
+//     </div>
+//   );
+// };
+
+class CollapseBlock extends React.Component<
+  ICollapseBlockProps,
+  ICollapseBlockState
+> {
+  state = {
+    collapse: this.props.collapse ?? false,
+  };
+
+  onHeaderClick = (): void => {
+    this.setState({ collapse: !this.state.collapse });
+  };
+
+  render(): JSX.Element {
+    let classNames = "collapse-block__body";
+    classNames += this.state.collapse ? " collapse-block__body--collapse" : "";
+
+    return (
+      <div className="collapse-block">
+        <div className="collapse-block__header" onClick={this.onHeaderClick}>
+          <div className="collapse-block__title">{this.props.title}</div>
+        </div>
+        <div className={classNames}>{this.props.children}</div>
       </div>
-      <div className={classNames}>{children}</div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default CollapseBlock;
