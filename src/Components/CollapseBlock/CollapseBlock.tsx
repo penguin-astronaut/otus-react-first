@@ -9,22 +9,6 @@ export interface ICollapseBlockProps {
 export interface ICollapseBlockState {
   collapse: boolean;
 }
-// const CollapseBlock: React.FC<ICollapseBlockProps> = ({
-//   children,
-//   title,
-//   collapse,
-// }): JSX.Element => {
-//   let classNames = "collapse-block__body";
-//   classNames += collapse ? " collapse-block__body--collapse" : "";
-//   return (
-//     <div className="collapse-block">
-//       <div className="collapse-block__header">
-//         <div className="collapse-block__title">{title}</div>
-//       </div>
-//       <div className={classNames}>{children}</div>
-//     </div>
-//   );
-// };
 
 class CollapseBlock extends React.Component<
   ICollapseBlockProps,
