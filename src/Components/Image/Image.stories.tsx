@@ -10,7 +10,7 @@ export default {
 } as Meta;
 const Template: Story<IImageProps> = (args) => <Image {...args} />;
 
-export const Picture = Template.bind({});
+export const Picture = Template;
 
 Picture.args = {
   src: "https://via.placeholder.com/150",
