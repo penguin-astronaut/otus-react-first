@@ -1,0 +1,21 @@
+.collapse-block {
+  border: 1px solid #e3dbdb;
+  border-radius: 10px;
+
+  &__header {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #e3dbdb;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__body {
+    padding: 5px;
+
+    &--collapse {
+      display: none;
+    }
+  }
+}
